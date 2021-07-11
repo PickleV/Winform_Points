@@ -1,0 +1,7 @@
+<SerialPort>
+  <PortName>2</PortName>
+  <BaudRate>5</BaudRate>
+  <Parity>0</Parity>
+  <StopBits>1</StopBits>
+  <DataBits>2</DataBits>
+</SerialPort>
