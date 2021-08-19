@@ -10,7 +10,7 @@ using Sunny.UI;
 
 namespace _20200627_SunnyUI_Test
 {
-    public partial class Form1 : Form
+    public partial class Form1 : UIForm
     {
         public Form1()
         {

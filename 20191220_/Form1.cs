@@ -407,5 +407,25 @@ namespace _20191220_
             public double TimeSpending; //Time consuming on each task in ms
             public string TaskName;
         }
+
+        private async void button14_Click(object sender, EventArgs e)
+        {
+            Stopwatch watch = new Stopwatch();
+            watch.Restart();
+            Thread.Sleep(10);
+            Console.WriteLine("Thread Test 1:"+watch.ElapsedMilliseconds);
+            watch.Restart();
+            await Task.Delay(10);
+            Console.WriteLine("Task Test 1:" + watch.ElapsedMilliseconds);
+
+            //Test 2
+            watch.Restart();
+            Thread.Sleep(100);
+            Console.WriteLine("Thread Test 2:" + watch.ElapsedMilliseconds);
+            watch.Restart();
+            await Task.Delay(100);
+            Console.WriteLine("Task Test 2:" + watch.ElapsedMilliseconds);
+
+        }
     }
 }

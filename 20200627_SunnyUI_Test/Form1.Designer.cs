@@ -32,11 +32,15 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1120, 662);
+            this.ClientSize = new System.Drawing.Size(1456, 757);
+            this.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold);
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "Form1";
+            this.Padding = new System.Windows.Forms.Padding(0, 40, 0, 0);
             this.Text = "Form1";
+            this.TextAlignment = System.Drawing.StringAlignment.Center;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 

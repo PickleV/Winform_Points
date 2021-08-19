@@ -45,6 +45,7 @@
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
+            this.button14 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -148,6 +149,7 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.button14);
             this.groupBox4.Controls.Add(this.button12);
             this.groupBox4.Controls.Add(this.button11);
             this.groupBox4.Controls.Add(this.button10);
@@ -231,6 +233,16 @@
             this.button13.UseVisualStyleBackColor = true;
             this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
+            // button14
+            // 
+            this.button14.Location = new System.Drawing.Point(20, 179);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(187, 23);
+            this.button14.TabIndex = 6;
+            this.button14.Text = "Async_Thread_Delay_Time";
+            this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -269,6 +281,7 @@
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button button14;
     }
 }
 
