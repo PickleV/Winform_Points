@@ -153,6 +153,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "20190815_Event_WInForm", "2
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "20210420_UI_SyncFusion", "20210420_UI_SyncFusion\20210420_UI_SyncFusion.csproj", "{F2B59109-18AE-4806-ABA7-719364420DDE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "20210822_InvokeSpeedTest", "20210822_InvokeSpeedTest\20210822_InvokeSpeedTest.csproj", "{C34E34E5-62E8-43BE-98DF-55130437DA11}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -761,6 +763,14 @@ Global
 		{F2B59109-18AE-4806-ABA7-719364420DDE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F2B59109-18AE-4806-ABA7-719364420DDE}.Release|x64.ActiveCfg = Release|Any CPU
 		{F2B59109-18AE-4806-ABA7-719364420DDE}.Release|x64.Build.0 = Release|Any CPU
+		{C34E34E5-62E8-43BE-98DF-55130437DA11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C34E34E5-62E8-43BE-98DF-55130437DA11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C34E34E5-62E8-43BE-98DF-55130437DA11}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{C34E34E5-62E8-43BE-98DF-55130437DA11}.Debug|x64.Build.0 = Debug|Any CPU
+		{C34E34E5-62E8-43BE-98DF-55130437DA11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C34E34E5-62E8-43BE-98DF-55130437DA11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C34E34E5-62E8-43BE-98DF-55130437DA11}.Release|x64.ActiveCfg = Release|Any CPU
+		{C34E34E5-62E8-43BE-98DF-55130437DA11}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

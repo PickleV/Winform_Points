@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading;
 using System.Timers;
 using System.Windows.Forms;
+using System.Threading.Tasks;
 
 namespace _20190813_Class1_Timer
 {
@@ -21,6 +22,7 @@ namespace _20190813_Class1_Timer
         string StringLoop = "abcde";
         int lifeSpan;
         bool bTimerStarted=false;
+        int Counter = 0;
         Stopwatch sw1 = new Stopwatch();
         DateTime t1;
         // System.Threading.Timer tTest = new System.Threading.Timer(p=>TimerThread(),);
@@ -60,8 +62,8 @@ namespace _20190813_Class1_Timer
             //picture
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
            // pictureBox1.Image = Image.FromFile(@"D:\Documents\Backup\My Pictures\plane\Canard.jpg");
-            path=Directory.GetFiles(@"D:\Documents\Backup\My Pictures\plane\");
-            pictureBox1.Image = Image.FromFile(path[picSelection]);
+            //path=Directory.GetFiles(@"D:\Documents\Backup\My Pictures\plane\");
+            //pictureBox1.Image = Image.FromFile(path[picSelection]);
             //String loop
             tbLoop.Text = StringLoop;
 
@@ -256,6 +258,33 @@ namespace _20190813_Class1_Timer
         private void tbLifeSpan_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Timer t1 = new System.Windows.Forms.Timer();
+            t1.Interval = 500;
+            t1.Tick += T1_Tick;
+            t1.Start();
+
+        }
+
+        private async void T1_Tick(object sender, EventArgs e)
+        {
+            var timer1 = (System.Windows.Forms.Timer)sender;
+            timer1.Enabled = false;
+
+            //Start
+            Counter += 1;
+            await Task.Delay(2000);
+
+
+            //Finish
+            Counter-= 1;
+
+            Debug.WriteLine(DateTime.Now.ToString("HH':'mm':'ss':'fff") + $"Timer Test:{Counter}");
+
+            timer1.Enabled = true;
         }
     }
 }

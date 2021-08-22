@@ -57,12 +57,22 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -118,7 +128,7 @@
             // rbString
             // 
             this.rbString.AutoSize = true;
-            this.rbString.Location = new System.Drawing.Point(496, 100);
+            this.rbString.Location = new System.Drawing.Point(46, 63);
             this.rbString.Name = "rbString";
             this.rbString.Size = new System.Drawing.Size(52, 17);
             this.rbString.TabIndex = 6;
@@ -130,7 +140,7 @@
             // 
             this.rbHex.AutoSize = true;
             this.rbHex.Checked = true;
-            this.rbHex.Location = new System.Drawing.Point(496, 133);
+            this.rbHex.Location = new System.Drawing.Point(46, 96);
             this.rbHex.Name = "rbHex";
             this.rbHex.Size = new System.Drawing.Size(44, 17);
             this.rbHex.TabIndex = 7;
@@ -152,7 +162,7 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupBox1.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
@@ -240,17 +250,19 @@
             // 
             // tbReceive
             // 
-            this.tbReceive.Location = new System.Drawing.Point(7, 22);
+            this.tbReceive.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tbReceive.Location = new System.Drawing.Point(3, 3);
             this.tbReceive.Multiline = true;
             this.tbReceive.Name = "tbReceive";
-            this.tbReceive.Size = new System.Drawing.Size(436, 241);
+            this.tbReceive.Size = new System.Drawing.Size(436, 250);
             this.tbReceive.TabIndex = 11;
             this.tbReceive.Tag = "";
             // 
             // bPortSend
             // 
+            this.bPortSend.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bPortSend.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.bPortSend.Location = new System.Drawing.Point(484, 40);
+            this.bPortSend.Location = new System.Drawing.Point(470, 205);
             this.bPortSend.Name = "bPortSend";
             this.bPortSend.Size = new System.Drawing.Size(98, 34);
             this.bPortSend.TabIndex = 12;
@@ -260,10 +272,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.bClear);
-            this.groupBox2.Controls.Add(this.rbRecHex);
-            this.groupBox2.Controls.Add(this.rbRecString);
-            this.groupBox2.Controls.Add(this.tbReceive);
+            this.groupBox2.Controls.Add(this.tableLayoutPanel2);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
             this.groupBox2.Name = "groupBox2";
@@ -274,8 +283,9 @@
             // 
             // bClear
             // 
+            this.bClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.bClear.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.bClear.Location = new System.Drawing.Point(484, 67);
+            this.bClear.Location = new System.Drawing.Point(30, 200);
             this.bClear.Name = "bClear";
             this.bClear.Size = new System.Drawing.Size(98, 34);
             this.bClear.TabIndex = 19;
@@ -287,7 +297,7 @@
             // 
             this.rbRecHex.AutoSize = true;
             this.rbRecHex.Checked = true;
-            this.rbRecHex.Location = new System.Drawing.Point(496, 185);
+            this.rbRecHex.Location = new System.Drawing.Point(46, 109);
             this.rbRecHex.Name = "rbRecHex";
             this.rbRecHex.Size = new System.Drawing.Size(44, 17);
             this.rbRecHex.TabIndex = 18;
@@ -299,7 +309,7 @@
             // rbRecString
             // 
             this.rbRecString.AutoSize = true;
-            this.rbRecString.Location = new System.Drawing.Point(496, 145);
+            this.rbRecString.Location = new System.Drawing.Point(46, 69);
             this.rbRecString.Name = "rbRecString";
             this.rbRecString.Size = new System.Drawing.Size(52, 17);
             this.rbRecString.TabIndex = 17;
@@ -309,14 +319,8 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.bCMD3);
-            this.groupBox3.Controls.Add(this.bCMD2);
-            this.groupBox3.Controls.Add(this.bCMD1);
-            this.groupBox3.Controls.Add(this.tbSend);
-            this.groupBox3.Controls.Add(this.bPortSend);
-            this.groupBox3.Controls.Add(this.rbString);
-            this.groupBox3.Controls.Add(this.rbHex);
-            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox3.Controls.Add(this.tableLayoutPanel1);
+            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox3.Location = new System.Drawing.Point(0, 0);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(608, 292);
@@ -327,7 +331,7 @@
             // bCMD3
             // 
             this.bCMD3.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.bCMD3.Location = new System.Drawing.Point(295, 209);
+            this.bCMD3.Location = new System.Drawing.Point(257, 32);
             this.bCMD3.Name = "bCMD3";
             this.bCMD3.Size = new System.Drawing.Size(98, 34);
             this.bCMD3.TabIndex = 15;
@@ -338,7 +342,7 @@
             // bCMD2
             // 
             this.bCMD2.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.bCMD2.Location = new System.Drawing.Point(167, 209);
+            this.bCMD2.Location = new System.Drawing.Point(141, 32);
             this.bCMD2.Name = "bCMD2";
             this.bCMD2.Size = new System.Drawing.Size(98, 34);
             this.bCMD2.TabIndex = 14;
@@ -349,7 +353,7 @@
             // bCMD1
             // 
             this.bCMD1.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.bCMD1.Location = new System.Drawing.Point(27, 209);
+            this.bCMD1.Location = new System.Drawing.Point(19, 32);
             this.bCMD1.Name = "bCMD1";
             this.bCMD1.Size = new System.Drawing.Size(98, 34);
             this.bCMD1.TabIndex = 13;
@@ -359,10 +363,11 @@
             // 
             // tbSend
             // 
-            this.tbSend.Location = new System.Drawing.Point(7, 22);
+            this.tbSend.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tbSend.Location = new System.Drawing.Point(3, 3);
             this.tbSend.Multiline = true;
             this.tbSend.Name = "tbSend";
-            this.tbSend.Size = new System.Drawing.Size(436, 164);
+            this.tbSend.Size = new System.Drawing.Size(431, 166);
             this.tbSend.TabIndex = 11;
             this.tbSend.Tag = "";
             // 
@@ -393,6 +398,71 @@
             this.panel3.Size = new System.Drawing.Size(608, 275);
             this.panel3.TabIndex = 19;
             // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 160F));
+            this.tableLayoutPanel1.Controls.Add(this.bPortSend, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.panel5, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.panel4, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.tbSend, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 16);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 63.15789F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 36.84211F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(602, 273);
+            this.tableLayoutPanel1.TabIndex = 16;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.rbString);
+            this.panel4.Controls.Add(this.rbHex);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(440, 3);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(159, 166);
+            this.panel4.TabIndex = 17;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.bCMD1);
+            this.panel5.Controls.Add(this.bCMD2);
+            this.panel5.Controls.Add(this.bCMD3);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(3, 175);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(431, 95);
+            this.panel5.TabIndex = 17;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 160F));
+            this.tableLayoutPanel2.Controls.Add(this.panel6, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.tbReceive, 0, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 16);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(602, 256);
+            this.tableLayoutPanel2.TabIndex = 20;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.rbRecString);
+            this.panel6.Controls.Add(this.bClear);
+            this.panel6.Controls.Add(this.rbRecHex);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel6.Location = new System.Drawing.Point(445, 3);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(154, 250);
+            this.panel6.TabIndex = 21;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -407,12 +477,19 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -448,6 +525,11 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Panel panel6;
     }
 }
 

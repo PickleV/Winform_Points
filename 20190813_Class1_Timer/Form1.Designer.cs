@@ -48,6 +48,7 @@
             this.timerLifeSpanTest = new System.Windows.Forms.Timer(this.components);
             this.tbLifeSpan = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,17 +58,17 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(566, 6);
+            this.textBox1.Location = new System.Drawing.Point(566, 7);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(222, 21);
+            this.textBox1.Size = new System.Drawing.Size(222, 20);
             this.textBox1.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(461, 9);
+            this.label1.Location = new System.Drawing.Point(461, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 12);
+            this.label1.Size = new System.Drawing.Size(91, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "当前系统时间：";
             // 
@@ -78,88 +79,88 @@
             "你好",
             "哈哈",
             "喵"});
-            this.comboBox1.Location = new System.Drawing.Point(633, 418);
+            this.comboBox1.Location = new System.Drawing.Point(633, 453);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(155, 20);
+            this.comboBox1.Size = new System.Drawing.Size(155, 21);
             this.comboBox1.TabIndex = 2;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(540, 418);
+            this.label2.Location = new System.Drawing.Point(540, 453);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 12);
+            this.label2.Size = new System.Drawing.Size(58, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "ComboBox";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(51, 127);
+            this.label3.Location = new System.Drawing.Point(51, 138);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(29, 12);
+            this.label3.Size = new System.Drawing.Size(31, 13);
             this.label3.TabIndex = 4;
             this.label3.Text = "年份";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(51, 164);
+            this.label4.Location = new System.Drawing.Point(51, 178);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(29, 12);
+            this.label4.Size = new System.Drawing.Size(31, 13);
             this.label4.TabIndex = 5;
             this.label4.Text = "月份";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(51, 202);
+            this.label5.Location = new System.Drawing.Point(51, 219);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(29, 12);
+            this.label5.Size = new System.Drawing.Size(31, 13);
             this.label5.TabIndex = 6;
             this.label5.Text = "天数";
             // 
             // cbYear
             // 
             this.cbYear.FormattingEnabled = true;
-            this.cbYear.Location = new System.Drawing.Point(107, 124);
+            this.cbYear.Location = new System.Drawing.Point(107, 134);
             this.cbYear.Name = "cbYear";
-            this.cbYear.Size = new System.Drawing.Size(121, 20);
+            this.cbYear.Size = new System.Drawing.Size(121, 21);
             this.cbYear.TabIndex = 7;
             this.cbYear.SelectedIndexChanged += new System.EventHandler(this.cbYear_SelectedIndexChanged);
             // 
             // cbMonth
             // 
             this.cbMonth.FormattingEnabled = true;
-            this.cbMonth.Location = new System.Drawing.Point(107, 161);
+            this.cbMonth.Location = new System.Drawing.Point(107, 174);
             this.cbMonth.Name = "cbMonth";
-            this.cbMonth.Size = new System.Drawing.Size(121, 20);
+            this.cbMonth.Size = new System.Drawing.Size(121, 21);
             this.cbMonth.TabIndex = 8;
             this.cbMonth.SelectedIndexChanged += new System.EventHandler(this.cbMonth_SelectedIndexChanged);
             // 
             // cbDay
             // 
             this.cbDay.FormattingEnabled = true;
-            this.cbDay.Location = new System.Drawing.Point(107, 199);
+            this.cbDay.Location = new System.Drawing.Point(107, 216);
             this.cbDay.Name = "cbDay";
-            this.cbDay.Size = new System.Drawing.Size(121, 20);
+            this.cbDay.Size = new System.Drawing.Size(121, 21);
             this.cbDay.TabIndex = 9;
             // 
             // bLast
             // 
-            this.bLast.Location = new System.Drawing.Point(367, 302);
+            this.bLast.Location = new System.Drawing.Point(367, 327);
             this.bLast.Name = "bLast";
-            this.bLast.Size = new System.Drawing.Size(75, 23);
+            this.bLast.Size = new System.Drawing.Size(75, 25);
             this.bLast.TabIndex = 10;
             this.bLast.Text = "上一张";
             this.bLast.UseVisualStyleBackColor = true;
             // 
             // bNext
             // 
-            this.bNext.Location = new System.Drawing.Point(518, 302);
+            this.bNext.Location = new System.Drawing.Point(518, 327);
             this.bNext.Name = "bNext";
-            this.bNext.Size = new System.Drawing.Size(75, 23);
+            this.bNext.Size = new System.Drawing.Size(75, 25);
             this.bNext.TabIndex = 11;
             this.bNext.Text = "下一张";
             this.bNext.UseVisualStyleBackColor = true;
@@ -167,17 +168,17 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(347, 124);
+            this.pictureBox1.Location = new System.Drawing.Point(347, 134);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(265, 147);
+            this.pictureBox1.Size = new System.Drawing.Size(265, 159);
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
             // 
             // tbLoop
             // 
-            this.tbLoop.Location = new System.Drawing.Point(53, 250);
+            this.tbLoop.Location = new System.Drawing.Point(53, 271);
             this.tbLoop.Name = "tbLoop";
-            this.tbLoop.Size = new System.Drawing.Size(175, 21);
+            this.tbLoop.Size = new System.Drawing.Size(175, 20);
             this.tbLoop.TabIndex = 13;
             this.tbLoop.TextChanged += new System.EventHandler(this.tbLoop_TextChanged);
             // 
@@ -194,26 +195,37 @@
             // 
             // tbLifeSpan
             // 
-            this.tbLifeSpan.Location = new System.Drawing.Point(192, 417);
+            this.tbLifeSpan.Location = new System.Drawing.Point(192, 452);
             this.tbLifeSpan.Name = "tbLifeSpan";
-            this.tbLifeSpan.Size = new System.Drawing.Size(100, 21);
+            this.tbLifeSpan.Size = new System.Drawing.Size(100, 20);
             this.tbLifeSpan.TabIndex = 14;
             this.tbLifeSpan.TextChanged += new System.EventHandler(this.tbLifeSpan_TextChanged);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(125, 420);
+            this.label6.Location = new System.Drawing.Point(125, 455);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(53, 12);
+            this.label6.Size = new System.Drawing.Size(45, 13);
             this.label6.TabIndex = 15;
             this.label6.Text = "lifeSpan";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(566, 49);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(150, 25);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "Timer OverFlow";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 488);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.tbLifeSpan);
             this.Controls.Add(this.tbLoop);
@@ -260,6 +272,7 @@
         private System.Windows.Forms.Timer timerLifeSpanTest;
         private System.Windows.Forms.TextBox tbLifeSpan;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button button1;
     }
 }
 

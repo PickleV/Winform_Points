@@ -32,10 +32,6 @@ namespace _20200614_UpWork_SerialPort_BitWise
         private void button1_Click(object sender, EventArgs e)
         {
 
-
-
-
-
         }
 
 
@@ -62,7 +58,7 @@ namespace _20200614_UpWork_SerialPort_BitWise
             { 
                // MessageBox.Show(data.Length.ToString()); //Display received length
                 s = BitConverter.ToString(data).Replace("-", " ");
-                Invoke(new MethodInvoker(() => tbReceive.AppendText(s+"\r\n")));
+                Invoke(new MethodInvoker(() => tbReceive.AppendText(s)));
                 Console.WriteLine(DateTime.Now.ToString("HH':'mm':'ss':'fff") +" : "+s);
             }
         }
