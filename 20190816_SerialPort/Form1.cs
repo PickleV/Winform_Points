@@ -13,6 +13,8 @@ using System.Windows.Media;
 using System.IO;
 using System.Threading;
 using System.Management;
+using System.Text.RegularExpressions;
+using System.Diagnostics;
 
 namespace _20200614_UpWork_SerialPort_BitWise
 {
@@ -247,7 +249,7 @@ namespace _20200614_UpWork_SerialPort_BitWise
             string[] sPorts = SerialPort.GetPortNames();
 
             //Check result
-            if (sPorts.Length<1)
+            if (sPorts.Length < 1)
             {
                 cbPortNumber.Items.Clear();
                 cbPortNumber.Items.Add("N/A");
@@ -416,26 +418,23 @@ namespace _20200614_UpWork_SerialPort_BitWise
                 return false;
             }
 
-            if (count > 1)
+            //Get captain
+            string sCaption = matchedObject["Caption"].ToString().ToUpper(); //Get display name of the device
+            string sExp = @"^.*\((COM[0-9]{1,2})\)$";
+
+            //Check if name ends with "COM"
+            if (!Regex.IsMatch(sCaption, sExp))
             {
-                Console.WriteLine("Method \"FindDeviceByHardwareID\":\r\n Multiple devices detected, count=" + count);
+                Debug.WriteLine("Method \"FindDeviceByHardwareID\":\r\n  Device detected,  but found no match COM port");
                 return false;
             }
 
 
-            //get Port Name if caption(DisplayName) has "comXX"
-            //eliminate none error
-            if (matchedObject["Caption"] == null)
-            {
-                Console.WriteLine("Method \"FindDeviceByHardwareID\":\r\n  Device detected,  but found no match COM port");
-                return false;
-            }
-            else
-            {
-                string sCaption = matchedObject["Caption"].ToString().ToUpper(); //Get display name of the device
-                ComName = sCaption.Substring(sCaption.IndexOf("(COM") + 1, 5).Replace(")", ""); //Get COM name of that device
-                return true;
-            }
+            //Get COM port
+            string[] Result = Regex.Split(sCaption, sExp);//Get result 
+            ComName = Result[1]; //Get COM name of that device
+            return true;
         }
     }
+}
 }
