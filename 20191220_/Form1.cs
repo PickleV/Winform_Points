@@ -31,6 +31,8 @@ namespace _20191220_
             });
             task.Start();
 
+            
+
             //2.Task.Factory.StartNew(Action action)创建和启动一个Task
             Task task2 = Task.Factory.StartNew(() =>
             {
@@ -46,7 +48,6 @@ namespace _20191220_
             //    Thread.Sleep(100);
             //    MessageBox.Show($"hello, task3的线程ID为{ Thread.CurrentThread.ManagedThreadId}");
             //});
-
 
         }
 
@@ -425,7 +426,81 @@ namespace _20191220_
             watch.Restart();
             await Task.Delay(100);
             Console.WriteLine("Task Test 2:" + watch.ElapsedMilliseconds);
+        }
 
+        private async void button15_Click(object sender, EventArgs e)
+        {
+            Stopwatch watch = new Stopwatch();
+            watch.Start();
+            for (int i = 0; i < 100; i++)
+            {
+                Thread.Sleep(1);              
+            }
+            watch.Stop();
+            Debug.WriteLine("Thread.Sleep time:"+watch.ElapsedMilliseconds);
+
+            watch.Restart();
+            for (int i = 0; i < 100; i++)
+            {
+                await Task.Delay(1);
+            }
+            watch.Stop();
+            Debug.WriteLine("Task.Delay time:" + watch.ElapsedMilliseconds);
+
+            watch.Restart();
+            for (int i = 0; i < 10000000; i++)
+            {
+                Thread.SpinWait(1);
+            }
+            watch.Stop();
+            Debug.WriteLine("Spin.Wait time:" + watch.ElapsedMilliseconds);
+        }
+
+
+        /// <summary>
+        /// Task Test
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+      
+        private void button16_Click(object sender, EventArgs e)
+        {
+            tStatus = Task.Run(()=> TaskOperation());
+        }
+
+        private void TaskOperation()
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                Debug.WriteLine($"Time 111:{i}");
+                Thread.Sleep(1000);
+            }
+
+            Task t2 = new Task(() =>{ }); //empty
+             t2 = Task.Run(()=> {
+                for (int i = 0; i < 10; i++)
+                {
+                    Debug.WriteLine($"Time 222:{i}");
+                    Thread.Sleep(1000);
+                    if (Task.CurrentId==t2.Id)
+                    {
+                        Debug.WriteLine(1);
+                    }
+                }
+            });
+        }
+        Task tStatus;
+        private void button17_Click(object sender, EventArgs e)
+        {
+            if (tStatus==null)
+            {
+                Debug.WriteLine("empty task");
+                return;
+            }
+
+
+            //Get task status
+            Debug.WriteLine($"IsCompleted:{tStatus.IsCompleted}");
         }
     }
 }

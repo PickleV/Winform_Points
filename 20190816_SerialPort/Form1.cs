@@ -12,6 +12,7 @@ using System.Xml;
 using System.Windows.Media;
 using System.IO;
 using System.Threading;
+using System.Management;
 
 namespace _20200614_UpWork_SerialPort_BitWise
 {
@@ -52,14 +53,14 @@ namespace _20200614_UpWork_SerialPort_BitWise
             if (rbRecString.Checked == true)
             {
                 s = Encoding.UTF8.GetString(data);
-                Invoke(new MethodInvoker(() => tbReceive.AppendText( s+"\r\n" )));
+                //Invoke(new MethodInvoker(() => tbReceive.AppendText( s+"\r\n" )));
             }
             else
-            { 
-               // MessageBox.Show(data.Length.ToString()); //Display received length
+            {
+                // MessageBox.Show(data.Length.ToString()); //Display received length
                 s = BitConverter.ToString(data).Replace("-", " ");
                 Invoke(new MethodInvoker(() => tbReceive.AppendText(s)));
-                Console.WriteLine(DateTime.Now.ToString("HH':'mm':'ss':'fff") +" : "+s);
+                Console.WriteLine(DateTime.Now.ToString("HH':'mm':'ss':'fff") + " : " + s);
             }
         }
 
@@ -133,7 +134,7 @@ namespace _20200614_UpWork_SerialPort_BitWise
                 port1.PortName = (string)cbPortNumber.Text;
                 port1.BaudRate = int.Parse(cbPortRate.Text);
                 port1.Parity = (System.IO.Ports.Parity)(cbVerify.SelectedIndex);
-                port1.StopBits = (StopBits)cbStopBits.SelectedIndex+1;
+                port1.StopBits = (StopBits)cbStopBits.SelectedIndex + 1;
 
                 port1.DataBits = Convert.ToInt32(cb_Bits.Text);
                 try
@@ -152,7 +153,8 @@ namespace _20200614_UpWork_SerialPort_BitWise
             else
             {
                 //Put port close in thread so UI won't freeze
-                Thread tTemp = new Thread(()=> {
+                Thread tTemp = new Thread(() =>
+                {
                     port1.Close();
                 });
                 tTemp.IsBackground = true;
@@ -216,7 +218,7 @@ namespace _20200614_UpWork_SerialPort_BitWise
             cbPortRate.Items.Add(11520);
             cbPortRate.Items.Add(19200);
             cbPortRate.Items.Add(38400);
-            cbPortRate.SelectedIndex=2;
+            cbPortRate.SelectedIndex = 2;
 
             //data bits 
             cb_Bits.Items.Clear();
@@ -243,11 +245,23 @@ namespace _20200614_UpWork_SerialPort_BitWise
         {
             //Get local serial ports
             string[] sPorts = SerialPort.GetPortNames();
+
+            //Check result
+            if (sPorts.Length<1)
+            {
+                cbPortNumber.Items.Clear();
+                cbPortNumber.Items.Add("N/A");
+                return;
+            }
+
+            //Add ports
             cbPortNumber.Items.Clear();
             for (int i = 0; i < sPorts.Length; i++)
             {
                 cbPortNumber.Items.Add(sPorts[i]);
             }
+
+            //Select first port
             cbPortNumber.SelectedIndex = 0;
         }
 
@@ -263,7 +277,7 @@ namespace _20200614_UpWork_SerialPort_BitWise
                     cbPortNumber.SelectedIndex = int.Parse(theNode.SelectSingleNode("PortName").InnerText);
                 }
                 cbPortRate.SelectedIndex = int.Parse(theNode.SelectSingleNode("BaudRate").InnerText);
-                cbStopBits.SelectedIndex = int.Parse(theNode.SelectSingleNode("StopBits").InnerText)-1;
+                cbStopBits.SelectedIndex = int.Parse(theNode.SelectSingleNode("StopBits").InnerText) - 1;
                 cb_Bits.SelectedIndex = int.Parse(theNode.SelectSingleNode("DataBits").InnerText);
                 cbVerify.SelectedIndex = int.Parse(theNode.SelectSingleNode("Parity").InnerText);
                 cbSetupByXML = true;
@@ -329,12 +343,99 @@ namespace _20200614_UpWork_SerialPort_BitWise
         {
             string s = "CD 03";
             SendInfo(s);
-            tbSend.Text=s;   //display the command
+            tbSend.Text = s;   //display the command
         }
 
         private void bFind_Click(object sender, EventArgs e)
         {
             LoadSerialPorts();
+        }
+
+        private void bSearchDevice_Click(object sender, EventArgs e)
+        {
+            //Variables
+            string sHardwareID = @"VID_10C4&PID_EA60";//Get DeviceID
+
+
+            //if fail, getting port wrong
+            if (!FindComDeviceByHardwareID(sHardwareID, out string thePort))
+            {
+                string errMSG = "Device not connected.."; //get error message
+                MessageBox.Show(errMSG);
+            }
+            else
+            {
+                string errMSG = $"Device connected on port {thePort}..";
+            }
+        }
+
+
+        //Find device
+        public static bool FindComDeviceByHardwareID(string sHardwareID, out string ComName)
+        {
+            //Init Variables
+            ComName = "";
+            sHardwareID = sHardwareID.ToUpper();//The default is with lowercase but device has upper case, so I switch it to upper case;        
+            string sResult = "";
+            int count = 0;
+
+            //Init finder
+            ManagementObject matchedObject = null; //store matched object if found
+            ManagementObjectSearcher theFinder = new ManagementObjectSearcher("SELECT * FROM WIN32_PnPEntity");
+            ManagementObjectCollection deviceList = theFinder.Get(); //Get device list
+            Console.WriteLine("PNP devices found:" + deviceList.Count); //Display count of devices found
+
+            //Match by device ID
+            //Match one by one in use hardwareID
+            foreach (ManagementObject theObject in deviceList)
+            {
+
+                //Use device ID
+                ////avoid instance error ， “Use hardware ID”
+                if (theObject["DeviceID"] == null)
+                {
+                    continue;
+                }
+                else
+                {
+                    //maintain all upper case to avoid missing match!!!
+                    if (theObject["DeviceID"].ToString().Contains(sHardwareID))
+                    {
+                        count += 1;//add Count
+                        matchedObject = theObject; //Save matched object!
+                        sResult += theObject["DeviceID"].ToString() + "\r\n";
+                        break; //No need to check all string of a hardwareID group.
+                    }
+                }
+            }
+
+            //Check result coun=0/>1 will be stopped!
+            if (count == 0)
+            {
+                Console.WriteLine("Method \"FindDeviceByHardwareID\":\r\n Cable not recognized.");
+                return false;
+            }
+
+            if (count > 1)
+            {
+                Console.WriteLine("Method \"FindDeviceByHardwareID\":\r\n Multiple devices detected, count=" + count);
+                return false;
+            }
+
+
+            //get Port Name if caption(DisplayName) has "comXX"
+            //eliminate none error
+            if (matchedObject["Caption"] == null)
+            {
+                Console.WriteLine("Method \"FindDeviceByHardwareID\":\r\n  Device detected,  but found no match COM port");
+                return false;
+            }
+            else
+            {
+                string sCaption = matchedObject["Caption"].ToString().ToUpper(); //Get display name of the device
+                ComName = sCaption.Substring(sCaption.IndexOf("(COM") + 1, 5).Replace(")", ""); //Get COM name of that device
+                return true;
+            }
         }
     }
 }
