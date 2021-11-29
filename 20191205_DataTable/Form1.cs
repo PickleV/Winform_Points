@@ -54,6 +54,15 @@ namespace _20191205_DataTable
             dataGridView2.DataSource = theTable1.DefaultView;
         }
 
+        /// <summary>
+        /// Use different way to generate table
+        /// </summary>
+        private void GenerateTableMethods()
+        {
+           
+
+        }
+
         private void Test1()
         {
             dt1.Columns.Add("ID", typeof(int));
@@ -356,6 +365,91 @@ namespace _20191205_DataTable
         private void button1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            Stopwatch t1 = new Stopwatch();
+            int iIndex= dtTest3.Rows.Count/2;
+            t1.Start();
+            DataRow dr = dtTest3.Rows[iIndex];
+            t1.Stop();
+            tbTest3.AppendText("Select used:" + t1.ElapsedMilliseconds + "ms\r\n");
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            Stopwatch watch = new Stopwatch();
+
+
+            dtTest3 = new DataTable();
+
+            dtTest3.Columns.Add("ID", typeof(int));
+            dtTest3.Columns.Add("Value", typeof(int));
+            dtTest3.Columns.Add("Time", typeof(DateTime));
+
+            if (checkBox1.Checked)
+            {
+                DataColumn[] dc = { dtTest3.Columns["ID"] };
+                dtTest3.PrimaryKey = dc;
+            }
+
+
+            int dt_ID = 0;
+            int count = 0;
+            try
+            {
+                count = int.Parse(tbTest3Count.Text);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+                return;
+            }
+
+            watch.Start();
+
+            for (int i = 0; i < count; i++)
+            {
+                DataRow theRow = dtTest3.NewRow();
+                Random rd = new Random();
+                int dt_Value = rd.Next(1, 9999999);
+                dt_ID++;
+                theRow["ID"] = dt_ID;
+                theRow["Time"] = DateTime.Now;
+                theRow["Value"] = dt_Value;
+                dtTest3.Rows.Add(theRow);
+
+                //Console.WriteLine(i);
+            }
+            watch.Stop();
+
+            dtTest3.Columns.Add("Status", typeof(string));
+            tbTest3.AppendText(watch.ElapsedMilliseconds + " ms for:" + count + "行数据:Column Add After\r\n");
+
+            dtTest3 = new DataTable();
+            dtTest3.Columns.Add("ID", typeof(int));
+            dtTest3.Columns.Add("Value", typeof(int));
+            dtTest3.Columns.Add("Time", typeof(DateTime));
+            dtTest3.Columns.Add("Status", typeof(string));
+            watch.Restart();
+            for (int i = 0; i < count; i++)
+            {
+                DataRow theRow = dtTest3.NewRow();
+                Random rd = new Random();
+                int dt_Value = rd.Next(1, 9999999);
+                dt_ID++;
+                theRow["ID"] = dt_ID;
+                theRow["Time"] = DateTime.Now;
+                theRow["Value"] = dt_Value;
+                theRow["Status"] = null;
+                dtTest3.Rows.Add(theRow);
+
+                //Console.WriteLine(i);
+            }
+            watch.Stop();
+            tbTest3.AppendText(watch.ElapsedMilliseconds + " ms for:" + count + "行数据:Column predefined.\r\n");
         }
     }
 }

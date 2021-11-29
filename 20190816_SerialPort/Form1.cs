@@ -109,9 +109,6 @@ namespace _20200614_UpWork_SerialPort_BitWise
                 //注意如果"00"--会转成"0"，所以先做前四位，再做后四位
                 //stringbuffer.Append(Convert.ToString(data[i]&0x, 16));
                 stringbuffer.Append(Convert.ToString(data[i], 16));
-
-
-
             }
             return stringbuffer.ToString();
         }
@@ -360,7 +357,7 @@ namespace _20200614_UpWork_SerialPort_BitWise
 
 
             //if fail, getting port wrong
-            if (!FindComDeviceByHardwareID(sHardwareID, out string thePort))
+            if (!FindComDeviceByDeviceID(sHardwareID, out string thePort))
             {
                 string errMSG = "Device not connected.."; //get error message
                 MessageBox.Show(errMSG);
@@ -373,11 +370,11 @@ namespace _20200614_UpWork_SerialPort_BitWise
 
 
         //Find device
-        public static bool FindComDeviceByHardwareID(string sHardwareID, out string ComName)
+        public static bool FindComDeviceByDeviceID(string sDeviceID, out string ComName)
         {
             //Init Variables
             ComName = "";
-            sHardwareID = sHardwareID.ToUpper();//The default is with lowercase but device has upper case, so I switch it to upper case;        
+            sDeviceID = sDeviceID.ToUpper();//The default is with lowercase but device has upper case, so I switch it to upper case;        
             string sResult = "";
             int count = 0;
 
@@ -401,7 +398,7 @@ namespace _20200614_UpWork_SerialPort_BitWise
                 else
                 {
                     //maintain all upper case to avoid missing match!!!
-                    if (theObject["DeviceID"].ToString().Contains(sHardwareID))
+                    if (theObject["DeviceID"].ToString().Contains(sDeviceID))
                     {
                         count += 1;//add Count
                         matchedObject = theObject; //Save matched object!
@@ -433,8 +430,9 @@ namespace _20200614_UpWork_SerialPort_BitWise
             //Get COM port
             string[] Result = Regex.Split(sCaption, sExp);//Get result 
             ComName = Result[1]; //Get COM name of that device
+            Debug.WriteLine($"Found device on port:{ComName}");
             return true;
         }
     }
 }
-}
+

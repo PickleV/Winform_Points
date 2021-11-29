@@ -46,9 +46,11 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button12 = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.button13 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
@@ -62,7 +64,7 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.button12 = new System.Windows.Forms.Button();
+            this.button14 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -77,24 +79,24 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(22, 270);
+            this.dataGridView1.Location = new System.Drawing.Point(22, 293);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(601, 268);
+            this.dataGridView1.Size = new System.Drawing.Size(601, 290);
             this.dataGridView1.TabIndex = 0;
             // 
             // tbRemove
             // 
-            this.tbRemove.Location = new System.Drawing.Point(234, 69);
+            this.tbRemove.Location = new System.Drawing.Point(234, 75);
             this.tbRemove.Name = "tbRemove";
-            this.tbRemove.Size = new System.Drawing.Size(75, 21);
+            this.tbRemove.Size = new System.Drawing.Size(75, 20);
             this.tbRemove.TabIndex = 11;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(140, 85);
+            this.button3.Location = new System.Drawing.Point(140, 92);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(75, 25);
             this.button3.TabIndex = 10;
             this.button3.Text = "除第N位";
             this.button3.UseVisualStyleBackColor = true;
@@ -102,9 +104,9 @@
             // 
             // bCreateDt
             // 
-            this.bCreateDt.Location = new System.Drawing.Point(140, 31);
+            this.bCreateDt.Location = new System.Drawing.Point(140, 34);
             this.bCreateDt.Name = "bCreateDt";
-            this.bCreateDt.Size = new System.Drawing.Size(75, 23);
+            this.bCreateDt.Size = new System.Drawing.Size(75, 25);
             this.bCreateDt.TabIndex = 9;
             this.bCreateDt.Text = "插入";
             this.bCreateDt.UseVisualStyleBackColor = true;
@@ -112,16 +114,16 @@
             // 
             // tbInput
             // 
-            this.tbInput.Location = new System.Drawing.Point(234, 33);
+            this.tbInput.Location = new System.Drawing.Point(234, 36);
             this.tbInput.Name = "tbInput";
-            this.tbInput.Size = new System.Drawing.Size(75, 21);
+            this.tbInput.Size = new System.Drawing.Size(75, 20);
             this.tbInput.TabIndex = 8;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(24, 31);
+            this.button1.Location = new System.Drawing.Point(24, 34);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(75, 25);
             this.button1.TabIndex = 7;
             this.button1.Text = "重置";
             this.button1.UseVisualStyleBackColor = true;
@@ -137,9 +139,9 @@
             this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.dataGridView1);
-            this.groupBox1.Location = new System.Drawing.Point(6, 6);
+            this.groupBox1.Location = new System.Drawing.Point(6, 7);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(648, 547);
+            this.groupBox1.Size = new System.Drawing.Size(648, 593);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Test1";
@@ -149,18 +151,18 @@
             // 
             this.groupBox4.Controls.Add(this.button8);
             this.groupBox4.Controls.Add(this.button9);
-            this.groupBox4.Location = new System.Drawing.Point(22, 181);
+            this.groupBox4.Location = new System.Drawing.Point(22, 196);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(468, 69);
+            this.groupBox4.Size = new System.Drawing.Size(468, 75);
             this.groupBox4.TabIndex = 9;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "转成XML不存在问题！注意要先Clone表结构！";
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(6, 20);
+            this.button8.Location = new System.Drawing.Point(6, 22);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(201, 23);
+            this.button8.Size = new System.Drawing.Size(201, 25);
             this.button8.TabIndex = 7;
             this.button8.Text = "直接保存为XML";
             this.button8.UseVisualStyleBackColor = true;
@@ -168,9 +170,9 @@
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(242, 20);
+            this.button9.Location = new System.Drawing.Point(242, 22);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(201, 23);
+            this.button9.Size = new System.Drawing.Size(201, 25);
             this.button9.TabIndex = 8;
             this.button9.Text = "直接读取XML";
             this.button9.UseVisualStyleBackColor = true;
@@ -179,17 +181,17 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(20, 32);
+            this.label3.Location = new System.Drawing.Point(20, 35);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(317, 12);
+            this.label3.Size = new System.Drawing.Size(319, 13);
             this.label3.TabIndex = 6;
             this.label3.Text = "加了索引后序列化就出了问题，不加索引就可以正常序列化";
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(264, 107);
+            this.button7.Location = new System.Drawing.Point(264, 116);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(201, 23);
+            this.button7.Size = new System.Drawing.Size(201, 25);
             this.button7.TabIndex = 5;
             this.button7.Text = "反序列化显示。FileStream";
             this.button7.UseVisualStyleBackColor = true;
@@ -197,9 +199,9 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(22, 107);
+            this.button6.Location = new System.Drawing.Point(22, 116);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(219, 23);
+            this.button6.Size = new System.Drawing.Size(219, 25);
             this.button6.TabIndex = 4;
             this.button6.Text = "序列化：转string,直接写入String";
             this.button6.UseVisualStyleBackColor = true;
@@ -207,9 +209,9 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(214, 66);
+            this.button5.Location = new System.Drawing.Point(214, 72);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(201, 23);
+            this.button5.Size = new System.Drawing.Size(201, 25);
             this.button5.TabIndex = 3;
             this.button5.Text = "反序列化显示。StreamReader";
             this.button5.UseVisualStyleBackColor = true;
@@ -217,9 +219,9 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(22, 66);
+            this.button4.Location = new System.Drawing.Point(22, 72);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(175, 23);
+            this.button4.Size = new System.Drawing.Size(175, 25);
             this.button4.TabIndex = 2;
             this.button4.Text = "序列化：转string,再序列化";
             this.button4.UseVisualStyleBackColor = true;
@@ -227,9 +229,9 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(525, 241);
+            this.button2.Location = new System.Drawing.Point(525, 261);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(75, 25);
             this.button2.TabIndex = 1;
             this.button2.Text = "清除显示";
             this.button2.UseVisualStyleBackColor = true;
@@ -244,21 +246,31 @@
             this.groupBox2.Controls.Add(this.tbRemove);
             this.groupBox2.Controls.Add(this.button3);
             this.groupBox2.Controls.Add(this.bCreateDt);
-            this.groupBox2.Location = new System.Drawing.Point(16, 6);
+            this.groupBox2.Location = new System.Drawing.Point(16, 7);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(326, 470);
+            this.groupBox2.Size = new System.Drawing.Size(326, 509);
             this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Test2.ADD.Remove";
+            // 
+            // button12
+            // 
+            this.button12.Location = new System.Drawing.Point(24, 467);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(111, 25);
+            this.button12.TabIndex = 22;
+            this.button12.Text = "更新Datagridview";
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // dataGridView2
             // 
             this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(24, 125);
+            this.dataGridView2.Location = new System.Drawing.Point(24, 135);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowTemplate.Height = 23;
-            this.dataGridView2.Size = new System.Drawing.Size(285, 282);
+            this.dataGridView2.Size = new System.Drawing.Size(285, 306);
             this.dataGridView2.TabIndex = 12;
             // 
             // timer1
@@ -268,6 +280,8 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.button14);
+            this.groupBox3.Controls.Add(this.button13);
             this.groupBox3.Controls.Add(this.button11);
             this.groupBox3.Controls.Add(this.button10);
             this.groupBox3.Controls.Add(this.checkBox1);
@@ -278,18 +292,28 @@
             this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Controls.Add(this.tbTest3Count);
             this.groupBox3.Controls.Add(this.bSelect);
-            this.groupBox3.Location = new System.Drawing.Point(360, 6);
+            this.groupBox3.Location = new System.Drawing.Point(360, 7);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(419, 454);
+            this.groupBox3.Size = new System.Drawing.Size(419, 492);
             this.groupBox3.TabIndex = 15;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Test3.Select.速度";
             // 
+            // button13
+            // 
+            this.button13.Location = new System.Drawing.Point(30, 130);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(99, 25);
+            this.button13.TabIndex = 22;
+            this.button13.Text = "选择DT行_Index";
+            this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
+            // 
             // button11
             // 
-            this.button11.Location = new System.Drawing.Point(302, 81);
+            this.button11.Location = new System.Drawing.Point(302, 88);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(99, 23);
+            this.button11.Size = new System.Drawing.Size(99, 25);
             this.button11.TabIndex = 21;
             this.button11.Text = "选择dictionary";
             this.button11.UseVisualStyleBackColor = true;
@@ -297,9 +321,9 @@
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(302, 37);
+            this.button10.Location = new System.Drawing.Point(302, 40);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(99, 23);
+            this.button10.Size = new System.Drawing.Size(99, 25);
             this.button10.TabIndex = 20;
             this.button10.Text = "生成dictionary";
             this.button10.UseVisualStyleBackColor = true;
@@ -308,18 +332,18 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(165, 125);
+            this.checkBox1.Location = new System.Drawing.Point(165, 135);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(48, 16);
+            this.checkBox1.Size = new System.Drawing.Size(50, 17);
             this.checkBox1.TabIndex = 19;
             this.checkBox1.Text = "索引";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // bCreateTest3
             // 
-            this.bCreateTest3.Location = new System.Drawing.Point(30, 37);
+            this.bCreateTest3.Location = new System.Drawing.Point(30, 40);
             this.bCreateTest3.Name = "bCreateTest3";
-            this.bCreateTest3.Size = new System.Drawing.Size(99, 23);
+            this.bCreateTest3.Size = new System.Drawing.Size(99, 25);
             this.bCreateTest3.TabIndex = 18;
             this.bCreateTest3.Text = "生成DataTable";
             this.bCreateTest3.UseVisualStyleBackColor = true;
@@ -327,51 +351,51 @@
             // 
             // tbTest3
             // 
-            this.tbTest3.Location = new System.Drawing.Point(30, 147);
+            this.tbTest3.Location = new System.Drawing.Point(30, 159);
             this.tbTest3.Multiline = true;
             this.tbTest3.Name = "tbTest3";
-            this.tbTest3.Size = new System.Drawing.Size(257, 236);
+            this.tbTest3.Size = new System.Drawing.Size(257, 255);
             this.tbTest3.TabIndex = 17;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(258, 92);
+            this.label2.Location = new System.Drawing.Point(258, 100);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(29, 12);
+            this.label2.Size = new System.Drawing.Size(31, 13);
             this.label2.TabIndex = 16;
             this.label2.Text = "行数";
             // 
             // tbTest3Select
             // 
-            this.tbTest3Select.Location = new System.Drawing.Point(165, 83);
+            this.tbTest3Select.Location = new System.Drawing.Point(165, 90);
             this.tbTest3Select.Name = "tbTest3Select";
-            this.tbTest3Select.Size = new System.Drawing.Size(75, 21);
+            this.tbTest3Select.Size = new System.Drawing.Size(75, 20);
             this.tbTest3Select.TabIndex = 15;
             this.tbTest3Select.Text = "50";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(258, 42);
+            this.label1.Location = new System.Drawing.Point(258, 46);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 12);
+            this.label1.Size = new System.Drawing.Size(31, 13);
             this.label1.TabIndex = 14;
             this.label1.Text = "行数";
             // 
             // tbTest3Count
             // 
-            this.tbTest3Count.Location = new System.Drawing.Point(165, 39);
+            this.tbTest3Count.Location = new System.Drawing.Point(165, 42);
             this.tbTest3Count.Name = "tbTest3Count";
-            this.tbTest3Count.Size = new System.Drawing.Size(75, 21);
+            this.tbTest3Count.Size = new System.Drawing.Size(75, 20);
             this.tbTest3Count.TabIndex = 13;
             this.tbTest3Count.Text = "10000";
             // 
             // bSelect
             // 
-            this.bSelect.Location = new System.Drawing.Point(30, 81);
+            this.bSelect.Location = new System.Drawing.Point(30, 88);
             this.bSelect.Name = "bSelect";
-            this.bSelect.Size = new System.Drawing.Size(99, 23);
+            this.bSelect.Size = new System.Drawing.Size(99, 25);
             this.bSelect.TabIndex = 12;
             this.bSelect.Text = "选择DT行";
             this.bSelect.UseVisualStyleBackColor = true;
@@ -384,7 +408,7 @@
             this.tabControl1.Location = new System.Drawing.Point(1, -2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1349, 582);
+            this.tabControl1.Size = new System.Drawing.Size(1349, 631);
             this.tabControl1.TabIndex = 16;
             // 
             // tabPage1
@@ -394,7 +418,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1341, 556);
+            this.tabPage1.Size = new System.Drawing.Size(1341, 605);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "基本操作";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -405,26 +429,26 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1341, 556);
+            this.tabPage2.Size = new System.Drawing.Size(1341, 605);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "序列化";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // button12
+            // button14
             // 
-            this.button12.Location = new System.Drawing.Point(24, 431);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(111, 23);
-            this.button12.TabIndex = 22;
-            this.button12.Text = "更新Datagridview";
-            this.button12.UseVisualStyleBackColor = true;
-            this.button12.Click += new System.EventHandler(this.button12_Click);
+            this.button14.Location = new System.Drawing.Point(30, 461);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(210, 25);
+            this.button14.TabIndex = 23;
+            this.button14.Text = "Create Table in Dieeferent Methods";
+            this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1351, 576);
+            this.ClientSize = new System.Drawing.Size(1351, 624);
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -481,6 +505,8 @@
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button button14;
     }
 }
 

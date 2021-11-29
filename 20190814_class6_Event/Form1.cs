@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -28,7 +29,7 @@ namespace _20190814_class6_Event
             Console.WriteLine(Test(true));
 
 
-            Console.ReadKey();
+          
         }
 
 
@@ -60,6 +61,32 @@ namespace _20190814_class6_Event
         public static void OnPlaying(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Student s1 = new Student();
+            if (s1.GetType()==typeof(Person))
+            {
+                //False
+            }
+            //True
+            else if(s1 is Person)
+            {
+                Debug.WriteLine("Student is person.");
+            }
+
+        }
+
+        class Person
+        {
+            public string Name { get; set; }
+            public int Age { get; set; }
+        }
+
+        class Student : Person
+        {
+            public int Grade { get; set; }
         }
     }
 }

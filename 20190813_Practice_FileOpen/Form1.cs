@@ -39,6 +39,7 @@ namespace _20190813_Practice_FileOpen
             {
                 textBox1.Text = ofd.FileName;
             }
+
         }
 
         private void button2_Click(object sender, EventArgs e)
