@@ -159,6 +159,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "20210826_TableLayout", "202
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "20210826.NetCore.5", "20210826.NetCore\20210826.NetCore.5.csproj", "{86FF9AD8-D69E-418A-80C7-121542D3F617}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "20211130_Resource", "20211130_Resource\20211130_Resource.csproj", "{3C700A51-335B-4383-9B94-428A3DE4E016}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -791,6 +793,14 @@ Global
 		{86FF9AD8-D69E-418A-80C7-121542D3F617}.Release|Any CPU.Build.0 = Release|Any CPU
 		{86FF9AD8-D69E-418A-80C7-121542D3F617}.Release|x64.ActiveCfg = Release|Any CPU
 		{86FF9AD8-D69E-418A-80C7-121542D3F617}.Release|x64.Build.0 = Release|Any CPU
+		{3C700A51-335B-4383-9B94-428A3DE4E016}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C700A51-335B-4383-9B94-428A3DE4E016}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C700A51-335B-4383-9B94-428A3DE4E016}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{3C700A51-335B-4383-9B94-428A3DE4E016}.Debug|x64.Build.0 = Debug|Any CPU
+		{3C700A51-335B-4383-9B94-428A3DE4E016}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C700A51-335B-4383-9B94-428A3DE4E016}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C700A51-335B-4383-9B94-428A3DE4E016}.Release|x64.ActiveCfg = Release|Any CPU
+		{3C700A51-335B-4383-9B94-428A3DE4E016}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
