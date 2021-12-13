@@ -18,7 +18,7 @@ mono_crash.*
 
 # Build results
 # Include the debugging file for each testing
-#[Dd]ebug/
+[Dd]ebug/
 [Dd]ebugPublic/
 [Rr]elease/
 [Rr]eleases/

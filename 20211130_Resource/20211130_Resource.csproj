@@ -83,5 +83,17 @@
   <ItemGroup>
     <None Include="Resources\sensor.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sensor_red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sensor_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sensor_purple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sensor_gray.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

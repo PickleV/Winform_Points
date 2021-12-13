@@ -450,6 +450,8 @@ namespace _20191205_DataTable
             }
             watch.Stop();
             tbTest3.AppendText(watch.ElapsedMilliseconds + " ms for:" + count + "行数据:Column predefined.\r\n");
+
+            
         }
     }
 }

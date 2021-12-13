@@ -6,6 +6,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace _20190814_class6_Event
@@ -84,9 +85,56 @@ namespace _20190814_class6_Event
             public int Age { get; set; }
         }
 
-        class Student : Person
+        class Student : Person,IDisposable
         {
             public int Grade { get; set; }
+            private Thread thread;
+            public bool IsDisposed { get; set; }
+
+            public Student()
+            {
+                thread = new Thread(ThreadProcess);
+                thread.IsBackground = true;
+                thread.Start();
+            }
+
+            private void ThreadProcess()
+            {
+                Debug.WriteLine("Student.ThreadProcess:Start");
+                
+                while (!this.IsDisposed)
+                {
+                    Thread.Sleep(1000);
+                    Debug.WriteLine("Did something.");
+                }
+                Debug.WriteLine("Student.ThreadProcess:Finished");
+            }
+
+            public void Dispose()
+            {
+                IsDisposed = true;
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            List<Student> sList = new List<Student>();
+
+            
+            Student sA = new Student();
+            sA.Name = "ABC";
+            sList.Add(sA);
+            sList.Clear();
+
+            using (sA)
+            {
+
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Debug.WriteLine("Do other things");
         }
     }
 }
