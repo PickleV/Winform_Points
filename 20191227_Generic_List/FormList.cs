@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -57,7 +58,12 @@ namespace _20191227_Generic_List
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            string[] List2=new string[theList.Count];
+            theList.CopyTo(List2);
+            theList.Clear();
+            Debug.WriteLine(List2.Length);
         }
+
+
     }
 }
