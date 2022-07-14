@@ -17,5 +17,12 @@ namespace _20220713_Dev_Layout_2201
         {
             InitializeComponent();
         }
+
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+            //ucHome homeControl = new ucHome();
+            //this.Controls.Add(homeControl);
+            
+        }
     }
 }

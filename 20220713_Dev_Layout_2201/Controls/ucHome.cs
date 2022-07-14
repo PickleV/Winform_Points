@@ -9,9 +9,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace _20220713_Dev_Layout_2201.Controls
+namespace _20220713_Dev_Layout_2201
 {
-    public partial class ucHome : DevExpress.XtraEditors.XtraUserControl
+    public partial class ucHome : XtraUserControl
     {
         public ucHome()
         {

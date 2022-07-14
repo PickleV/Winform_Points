@@ -27,6 +27,7 @@ namespace _20220713_Dev_Layout_2201
             this.Hide();
             FormMain winMain = new FormMain();
             winMain.ShowDialog();
+            this.Close();
         }
     }
 }

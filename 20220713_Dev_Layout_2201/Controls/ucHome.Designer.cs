@@ -1,5 +1,7 @@
 ﻿
-namespace _20220713_Dev_Layout_2201.Controls
+using DevExpress.XtraEditors;
+
+namespace _20220713_Dev_Layout_2201
 {
     partial class ucHome
     {
