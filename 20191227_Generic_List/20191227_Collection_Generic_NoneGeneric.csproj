@@ -105,5 +105,11 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\20190814_Class_General\20190814_Class_General.csproj">
+      <Project>{dbe0e156-ec64-4a60-8bd6-03f225d1ee74}</Project>
+      <Name>20190814_Class_General</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

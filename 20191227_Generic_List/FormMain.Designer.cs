@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button10 = new System.Windows.Forms.Button();
@@ -43,20 +43,11 @@
             this.button11 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.bArrrayByte = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(21, 29);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(113, 25);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "basic_list<>";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -72,9 +63,9 @@
             // 
             this.button4.Location = new System.Drawing.Point(21, 91);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 25);
+            this.button4.Size = new System.Drawing.Size(113, 25);
             this.button4.TabIndex = 3;
-            this.button4.Text = "dictionary";
+            this.button4.Text = "Dictionary Form";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -110,8 +101,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button7);
             this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.button7);
             this.groupBox1.Controls.Add(this.button6);
             this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
@@ -121,18 +112,29 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Generic Collection (Use generic!)";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(140, 29);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(113, 25);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "List Form Check";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(160, 29);
+            this.button7.Location = new System.Drawing.Point(21, 29);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(113, 25);
             this.button7.TabIndex = 7;
-            this.button7.Text = "List Test";
+            this.button7.Text = "List Test Form";
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.bArrrayByte);
             this.groupBox2.Controls.Add(this.button10);
             this.groupBox2.Controls.Add(this.button9);
             this.groupBox2.Controls.Add(this.button8);
@@ -206,6 +208,16 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thread Safe Collection";
             // 
+            // bArrrayByte
+            // 
+            this.bArrrayByte.Location = new System.Drawing.Point(87, 28);
+            this.bArrrayByte.Name = "bArrrayByte";
+            this.bArrrayByte.Size = new System.Drawing.Size(147, 25);
+            this.bArrrayByte.TabIndex = 9;
+            this.bArrrayByte.Text = "Array (Byte) reference type";
+            this.bArrrayByte.UseVisualStyleBackColor = true;
+            this.bArrrayByte.Click += new System.EventHandler(this.bArrrayByte_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -226,8 +238,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
@@ -242,6 +252,8 @@
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button bArrrayByte;
     }
 }
 

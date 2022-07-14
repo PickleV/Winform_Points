@@ -55,7 +55,7 @@ namespace _20210125_Socket
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(453, 63);
+            this.button3.Location = new System.Drawing.Point(409, 46);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 2;

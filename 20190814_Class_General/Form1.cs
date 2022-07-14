@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading;
 using System.Windows.Forms;
 
-namespace _20190814_class6_Event
+namespace _20190814_Class_General
 {
     public partial class Form1 : Form
     {

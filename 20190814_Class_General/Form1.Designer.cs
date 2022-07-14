@@ -1,4 +1,4 @@
-﻿namespace _20190814_class6_Event
+﻿namespace _20190814_Class_General
 {
     partial class Form1
     {

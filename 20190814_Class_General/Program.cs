@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace _20190814_class6_Event
+namespace _20190814_Class_General
 {
     static class Program
     {

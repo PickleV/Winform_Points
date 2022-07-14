@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Windows.Forms;
+using _20190814_Class_General;
 
 namespace _20191227_Generic_List
 {
@@ -27,8 +28,6 @@ namespace _20191227_Generic_List
             {
                 theList.Add(DateTime.Now.ToString()+":"+i);
             }
-
-            
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -64,6 +63,46 @@ namespace _20191227_Generic_List
             Debug.WriteLine(List2.Length);
         }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            //Test1(Value saved)
+            var sGroup1 = CreateStudentGroup();
+            var sGroup2 = sGroup1.ToList();//Create a new list instead of reference
+            sGroup1.Clear();
+            Debug.WriteLine("Test1:"+sGroup2.Count); //Same number
 
+            //Test2(value cleared)
+            sGroup1= CreateStudentGroup();
+            sGroup2 = sGroup1;
+            sGroup1.Clear();
+            Debug.WriteLine("Test2:"+sGroup2.Count);
+
+        }
+
+        private List<Student> CreateStudentGroup()
+        {
+            List<Student> sGroup = new List<Student>();
+            for (int i = 0; i < 10; i++)
+            {
+                var student = new Student() { Name = "Name_" + i.ToString(), Age = i, Grade = i };
+                sGroup.Add(student);
+            }
+
+            return sGroup;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            List<int> theList = new List<int>();
+            for (int i = 0; i < 50; i++)
+            {
+                theList.Add(i);
+            }
+            theList.Add(3);
+            theList.Add(4);
+            MessageBox.Show("num of elements is:" + theList.Count.ToString());
+            theList.Sort();
+            MessageBox.Show("Capacity is:" + theList.Capacity.ToString());
+        }
     }
 }

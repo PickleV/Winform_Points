@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Collections.Concurrent;
+using _20190814_Class_General;
+using System.Diagnostics;
 
 namespace _20191227_Generic_List
 {
@@ -20,16 +22,7 @@ namespace _20191227_Generic_List
 
         private void button1_Click(object sender, EventArgs e)
         {
-            List<int> theList = new List<int>();
-            for (int i = 0; i < 50; i++)
-            {
-                theList.Add(i);
-            }
-            theList.Add(3);
-            theList.Add(4);
-            MessageBox.Show("num of elements is:" + theList.Count.ToString());
-            theList.Sort();
-            MessageBox.Show("Capacity is:" + theList.Capacity.ToString());
+
 
 
         }
@@ -212,6 +205,25 @@ namespace _20191227_Generic_List
             FormConcurrentBag winBag = new FormConcurrentBag();
             winBag.Show();
 
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Debug.WriteLine($"Is Form Exist:{csMethod.IsFormExist(typeof(FormList))}");
+        }
+
+        private void bArrrayByte_Click(object sender, EventArgs e)
+        {
+            byte[] bData = new byte[] { 0x00,0x01,0x02};
+            UpdateByteArray(bData);
+            Debug.WriteLine(BitConverter.ToString(bData));
+
+            Debug.WriteLine(BitConverter.ToString(new byte[9]));
+        }
+
+        private void UpdateByteArray(byte[] byteArray)
+        {
+            byteArray[1] = 0x22;
         }
     }
 }
