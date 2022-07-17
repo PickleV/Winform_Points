@@ -10,9 +10,9 @@ using Sunny.UI;
 
 namespace _20200627_SunnyUI_Test
 {
-    public partial class Form1 : UIForm
+    public partial class FormMain : UIForm
     {
-        public Form1()
+        public FormMain()
         {
             InitializeComponent();
         }
@@ -36,6 +36,12 @@ namespace _20200627_SunnyUI_Test
         private void InitNavMenu()
         {
             
+        }
+
+        private void bSample1_Click(object sender, EventArgs e)
+        {
+            Form2 f2 = new Form2();
+            f2.Show();
         }
     }
 }
